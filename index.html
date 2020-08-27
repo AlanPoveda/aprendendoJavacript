@@ -64,12 +64,12 @@
 
         // Funções
 
-        funtion soma(nuemro1,numero2){
+        function somas(numero1, numero2){
             var resultado = numero1 + numero2; // somente existe esse resultado dentro da função
             return resultado;
         }
 
-        var resultado = soma(1,2); /*O var tive que criar
+        var resultado = somas(1,2); /*O var tive que criar
         para poder aparecer no console, pois agora esta sendo executada
         afora da função. */
         console.log(resultado);
@@ -77,7 +77,39 @@
 
         // condicionais dentro do JS
 
-        //eita
+        function retornaSexo(sexo){
+            
+            if (sexo == 'M'){
+                return "Masculino";
+            } else if (sexo == "F"){
+                return "Feminino";
+            }
+            
+            else {
+                return "Outro";
+            }
+
+        }
+        
+        // exemplo de Switch and Case, training more
+        var resultados = retornaSexo('F');
+        console.log(resultados);
+
+        function coresGosto(cores){
+            switch (cores){
+                case "b":
+                    return "Branco";
+                case "p":
+                    return "Preto";
+                default:
+                    return "Tem que me conhecer melhor";
+
+            }   
+        }
+        var coresResultado = coresGosto("p");
+        console.log(coresResultado); 
+
+        // Operadores lógicos 
 
     </script>
 </body>
