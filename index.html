@@ -1,0 +1,85 @@
+<!DOCTYPE hmtl>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Estudo JS</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+
+    <!--Dentro dessa tag Script, é aonde executa o Java script, e ideal
+    deixar sempre no final-->
+    <script>
+        console.log("Hello World") //Console is a global
+
+    // Variáveis Primitivas
+
+        var nome = "Alan Poveda"; //Precisa de VAR para começar a variável
+        var idade = 24;
+        var peso = 74.3;
+        var humano = true;
+        var vetores = ['Diego', 'Ana', 'Alan'];
+
+        var aluno = { //Este daqui é um objeto, tipo variável mas com várias informações
+            nome: vetores[2], // Assim eu posso puxar uma informação de uma Array aqui no objeto
+            idade: 24,
+            peso: 74.3,
+            humano: true,
+        };
+
+        console.log(vetores); // Chamar algo que você queira ver
+        console.log(vetores[1]); // Especifica o que quero ver nessa arrray
+        console.log(aluno.idade);// Assim é para ver uma propiedade do objeto
+        console.log(aluno.nome);
+        
+        //Agora a forma matemática por trás da programação
+
+        var x = 10;
+        var y = 5;
+
+        // OR
+
+        var z = 20, u = 7; // ja declara as duas numa linha só
+
+        console.log(x,y);
+
+        var multiplicação = x * y;
+        var divisao = x / y;
+        var subtracao = x - y;
+        var modulo = x % y;
+
+        // x += 3 é igual a x = x +3 pode ser feito isso
+        // x *= 3 é igual a x = x * 3
+        // x -=3 é igual a x = x - 3
+        // x /= 3 é igual a x = x / 3
+        /* Até pode ser feito isso com proprias variáveis
+            como x *= y é igual que x = x * y  e assim vai
+
+        */
+        console.log("O resultado dessa operação é", multiplicação );
+        console.log(divisao);
+        console.log(subtracao);
+        console.log(modulo);
+
+        // Funções
+
+        funtion soma(nuemro1,numero2){
+            var resultado = numero1 + numero2; // somente existe esse resultado dentro da função
+            return resultado;
+        }
+
+        var resultado = soma(1,2); /*O var tive que criar
+        para poder aparecer no console, pois agora esta sendo executada
+        afora da função. */
+        console.log(resultado);
+
+
+        // condicionais dentro do JS
+
+        //eita
+
+    </script>
+</body>
+
+</html>
