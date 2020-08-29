@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 03</title>
+</head>
+<body>
+    <input type="text" name="nome">
+    <button onclick="adicionar()">Adicionar</button>
+    <ul id="lista">
+
+    </ul>
+
+
+
+    <script>
+        var nomes = ['Diego', 'Gabriel', 'Lucas'];
+        var listElement = document.getElementById('lista');
+        var inputElement = document.querySelector('input');
+
+        
+        for (var nome of nomes){
+            var liElement = document.createElement('li');
+            var textElement = document.createTextNode(nome)// Importante para inserir a mensagem
+
+            liElement.appendChild(textElement);
+            listElement.appendChild(liElement);
+        };
+        
+        
+
+    </script>
+</body>
+</html>

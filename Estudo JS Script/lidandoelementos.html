@@ -1,0 +1,41 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lidando com Elementos</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="box" id="teste">
+            
+            </div>
+        </div>
+        
+        
+
+        
+        <script>
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href','google.com');
+
+            var textElement = document.createTextNode("acessar o site do google");
+            linkElement.appendChild(textElement); // Inserindo o texto no novo elemento, que seria o site
+
+            var containerElement = document.querySelector('#app');// isso foi feito para aparecer no html
+            containerElement.appendChild(linkElement); 
+
+            var inputElement = document.querySelector("#name");
+            containerElement.removeChild(inputElement); // removeu o input do HTML 
+            
+            // Alterando estilos através do JSscript
+
+            var boxElement = document.querySelector('.box'); // Como selecionar uma Class
+
+            boxElement.style.width = 100;
+            boxElement.style.height = 100;
+            boxElement.style.backgroundColor = '#483D8B';
+
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Usando DOM</title>
+    </head>
+<body>
+    <h1>Aprendendo a DOM</h1>
+    <div id="app">
+        <!--Atravé do ON da para ver o que pode o jsscript fazer-->
+        <button onmouseover="mostraAlerta()"> me pressione</button>
+        <input type="text" name="nome" id="nome" class="nome"/>
+        <button class="botao"> Adicionar </button>
+
+    </div>
+    <script>
+        // Aprendendo a DOM
+        // quando poem id consegue manipular
+        function mostraAlerta() {
+            alert('Botão foi clicado');
+        }
+
+        //var inputElementId = document.getElementById('nome');
+        //var inputElement = document.getElementsByTagName('input'); /* Ele retorna com 
+        //Array de quantos input tiver ou  input[0] para escolher o elemento*/
+        //var inputClass = document.getElementsByClassName('name');
+        //retorna um Array novamente
+        //var inputCarry = document.querySelector('body div#app input'); // Forma para poder se referenciar
+        //var inputQuarry = document.querySelector('input[name=nome]'); // Outra forma de poder se referenciar
+        //var inputQuerryUnica = document.querySelector('input'); // Ele vai selecionar somente um input! o primeiro
+        //var inputquerryAll = document.querySelectorAll('input'); // vai selecionar todos os input e voltar em uma array
+
+        var inputElement = document.querySelector('input[name=nome]');
+
+        var btnElement = document.querySelector('button.botao');
+        btnElement.onclick = function(){
+            var text = inputElement.value;
+            alert(text);
+        }
+
+        
+    </script>    
+</body>
+
+
+
+</html>

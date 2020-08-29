@@ -109,7 +109,83 @@
         var coresResultado = coresGosto("p");
         console.log(coresResultado); 
 
-        // Operadores lógicos 
+        // Operadores lógicos AND, OR , NOT
+
+        var controle = "sala" , tamanho = 4;
+
+        if (controle == "sala" && tamanho >= 4){ // AND
+            console.log ("Esse é o controle")
+        }
+        if (controle == "sala" || tamanho == 3){ // OR
+            console.log ("É outro controle da sala")
+        }
+        if (controle != "quarto"){ //NOT
+            console.log ("Continua sendo da sala ")
+        }
+
+        // Colocando o valor da resposta em uma variavel
+
+        var estaOuNao = "Estou";
+        var camiseta;
+
+        if (estaOuNao == "Estou"){
+            camiseta = true;
+        }else {
+            camiseta = false;
+        }
+        console.log(camiseta);
+
+        // Operadores true or false resumido no código
+
+        var corNova = "Vermelho";
+
+        var corCelular = corNova == "Vermelho"; // Já esta verificando a condição
+        // Retorna true or false
+        console.log(corCelular);
+
+        // Forma Resumida do IF, condição ternária
+
+        var caneta = 'Vermelha';
+
+        var corCaneta = (caneta === 'Azul') ? 'É azul' : 'Não é azul a caneta';
+        console.log(corCaneta);
+
+        // Estrutura de repetição While and For
+
+        // FOR
+        //Se você souber o tamanho do intervalo, recomendo usar o FOR
+        for (var i = 0; i <= 100; i++){
+            console.log(i);
+        }
+
+
+        //WHILE
+        /* Se não souber o tamanho do intervalo usar WHILE, exemplo abaixo, você nao sabe
+        quantas vezes vai dividir esse número por 5 até virar menor que 50
+        então é usado o while nesse caso */
+
+        var j = 32364237;
+
+        while ( j > 50 ){
+            console.log(j);
+
+            j /= 5;
+        }
+
+        //Intervalo e Time Out
+
+        function exibeAlgo(){
+            console.log ('Hello World');
+        }
+
+        setInterval(exibeAlgo(), 1000 ); 
+        
+        /*Tempo 1 seg. como chamei a função
+        normalmente executou uma única vez, mas se eu colocar exibeAlgo, sem nada 
+        ele vai pegar essa função e exibir o resultado dela a cada 1 segundo, pois 
+        o setInterval() é responsável por esse funcionamento*/
+
+        setTimeout(exibeAlgo , 5000); // Executa uma única vez, mas funciona como um Timer, somente após 5 seg  
 
     </script>
 </body>

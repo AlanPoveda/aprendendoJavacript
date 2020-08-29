@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Exercícios modulos 2
+        </title>
+    </head>
+    <body>
+        <button onclick="criarBotao()">Crie uma caixa nova
+
+
+        </button>
+        <div id="app">
+            
+
+        </div>
+
+
+        <script>
+            
+            // Execício 01 Modulo 2
+            function criarBotao(){
+                var boxElement = document.createElement('div');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#483D8B';
+
+                var containerElement = document.querySelector('div');
+                containerElement.appendChild(boxElement);
+            
+            }
+
+        </script>
+    </body>
+</html>

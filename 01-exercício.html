@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <tile>Exercícios JS</tile>
+</head>
+<body>    
+<h1>Exercícios, mas todos serão visualizados no terminal<br>
+        então pode clicar f12 ou o botão direito e inspecionar.
+</h1>
+
+<script>
+    // 01 Exercício
+    var endereco = {
+        rua: "Rua Bento gonçalves",
+        numero: 1293,
+        barrio: "Tijuco preto",
+        cidade: "São Paulo",
+        uf: "Sp"
+    };
+
+        console.log('O usuario mora em',
+        endereco['cidade'],
+        '/',
+        endereco['uf'],
+        ", no bairro",
+        endereco['barrio'],
+        'na rua',
+        endereco['rua'],
+        'com ',
+        endereco['numero'],
+    );
+
+    // 02 exercício
+
+    function pares(x,y){
+        while (x <= y){
+            if((x % 2)==0){ // se dividir por dois e o resultado for igual a 0, significa que é par, e tem que printar
+                console.log(x)
+            }
+            x++;
+        }
+
+    }
+
+    pares(32, 321)
+
+    // 03 Exercício 
+
+    function temHabilidade(skills){
+        
+        if (skills.indexOf('Javascript') >= 0){
+            console.log("Existe essa habilidade")
+        }else {
+            console.log("Não vejo essa habilidade, treine mais")
+        }
+    }
+
+    var skills = ['Javascript', 'ReactJS', 'React Native'];
+    temHabilidade(skills);
+    
+
+    // 04 Exercício 
+
+    function experiencia(anos){
+        if (anos <= 1){
+            console.log("Iniciante")
+        }else if (anos > 1 && anos <= 3){
+            console.log("Intermediário")
+        }else if (anos > 3 && anos <= 6){
+            console.log("Avançado")
+        }else if (anos > 6){
+            console.log("Jedi Master")
+        }
+        
+        }
+
+    var anosEstudo = 2;
+    experiencia(anosEstudo);
+
+    // 05 Exercício
+
+    var usuario = [
+        {
+            nome: "Diego",
+            habilidades: ["Javascript","ReactJS","Redux"]
+        },
+        {
+            nome: "Gabriel",
+            habilidades: ["ValuesJS","Ruby on Rails", "Elixir"]
+        }
+    ];
+
+    function resultadoUsuario(){
+        for (var value of usuario){ //separar os objetos. for of
+            console.log ( 
+                'O ', 
+                value['nome'],
+                'possui habilidades :',
+                value['habilidades'].join(', '), //Values[habilidades] foi a forma de mostrar a array
+                //join() é um separador de arrays, para colocar as informações
+                );
+            }
+            
+
+         
+    }
+
+    resultadoUsuario()
+
+    /*Resultado esperado
+        O Diego possui as habilidades: Javascript, ReactJS, Redux
+        O Gabriel possui as habilidades: ValueJS, Ruby on Rails, Elixir*/
+
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Exercícios modulos 2
+        </title>
+    </head>
+    <body>
+        <button id="novo">Crie uma caixa nova</button>
+        <div id="caixa">
+            
+
+        </div>
+
+
+        <script>
+            
+            // Exercício 02 Modulo 2
+           var btnElement = document.getElementById('novo');
+           var caixaElement = document.getElementById('caixa');
+
+           // Random color
+
+           function getRandomColor() {
+                var letters = '0123456789ABCDEF';
+                var color = '#';
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+                }
+            
+
+            // clique Botão
+
+            // Quando você tranforma uma variavel em uma Function, vc ativa o bloco toda vez
+           btnElement.onclick = function(){
+               var caixa = document.createElement('div')
+
+               caixa.style.height = '100px';
+               caixa.style.width = '100px';
+               caixa.style.backgroundColor = '#f00';
+
+               // troca de cor dentro dessa function e div
+
+               caixa.onmouseover = function () {
+                   caixa.style.backgroundColor = getRandomColor();
+               }
+
+               caixaElement.appendChild(caixa); //aqui ele adiciona a variavel caixa a nova div
+
+           };
+            
+        </script>
+    </body>
+</html>
