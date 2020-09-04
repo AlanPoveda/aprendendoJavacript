@@ -9,6 +9,7 @@ var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 
 // Renderizando na tela
 
+
 function renderTodos(){
     // Apagar os itens ja colocados na Array
     listElement.innerHTML = ''; //Tudo que estiver na <ul> vai retornar vazio
@@ -26,7 +27,7 @@ function renderTodos(){
         // aqui ele percorre a Array e vai e indicar a posição dela
         var pos = todos.indexOf(todo);
 
-        // Segunda parte, passa dentro de uma function, contatenado, a posição que será excluida 
+        // Segunda parte, passa dentro de uma function, contatenando, a posição que será excluida 
         linkElement.setAttribute('onclick', 'deleteTodo('+ pos +')'); 
         var linkText = document.createTextNode('Excluir');
 
